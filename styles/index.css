@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+.navbar-container{
+    position: sticky;
+    top:0;
+}
+.navbar-content{
+    border:2px solid red;
+    height:4rem;
+    background-color: white;
+    display:flex;
+}
+.nav-logo{
+    border:2px solid green;
+    height:100%;
+    width:8%;
+
+    img{
+        height:100%;
+        width:100%;
+        object-fit:contain;
+    }
+}
+
+.header{
+    border:2px solid blue;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    gap:2rem;
+    width:92%;
+}
+.theme-icon-container{
+    display:flex;
+    justify-content:space-between;
+    cursor: pointer;
+}
+.logo-title{
+    font-size:22px;
+}
+.moon-icon{
+    font-size:22px;
+}
+.moon-icon>p{
+    font-weight: lighter;
+}
+
+@media screen and (min-width:300px) {
+    .logo-title{
+        display:none;
+    }
+    .header{
+        justify-content: end;
+    }
+    .theme-icon-container{
+        padding:0 1rem;
+        align-items: center;
+    }
+    .moon-icon::before{
+        font-size:1.7rem;
+    }
+    .theme-icon-container>p{
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    .nav-logo{
+        width:32%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .nav-logo{
+        width:12%;
+    }
+    .logo-title{
+        display:inline-block;
+    }
+    .header{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .nav-logo{
+        width:8%;
+    }
+}
