@@ -48,6 +48,87 @@
     font-weight: lighter;
 }
 
+/* styles for search and filter section */
+.search-and-filter-container{
+    border:2px solid black;
+    min-height:4rem;
+    display:flex;
+    justify-content: space-between;
+}
+.search-container{
+    border:2px solid red;
+    height:100%;
+    width:30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-container{
+    border:2px solid red;
+    height:100%;
+    width:30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+#search-input{
+    width:70%;
+    padding:2%;
+}
+#filter-by-region{
+    width:70%;
+    padding:2%;
+}
+.countries-card-container{
+    border:2px solid black;
+    height:100vh;
+    display:grid;
+    /* grid-template-rows: auto; */
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.country-card{
+    border:2px solid blue;
+    height:30rem;
+    max-width:400px;
+    margin:auto;
+}
+.country-image-container{
+    border:2px solid green;
+    height:60%;
+
+    img{
+        height:100%;
+        width:100%;
+        object-fit:fill;
+    }
+}
+.country-text-container{
+    border:2px solid red;
+    height:40%;
+    padding:1rem 0.7rem;
+}
+.country-name{
+    font-size:xx-large;
+}
+.other-texts{
+    border:1px solid black;
+    margin-top:10px;
+    font-size: 1.25rem;
+
+    .capital-texts,.region-text,.population-text{
+        display:flex;
+        margin-top:0.5rem;        
+    }
+    .text-fade{
+        color:gray;
+    }
+}
+
+
+
 @media screen and (min-width:300px) {
     .logo-title{
         display:none;
@@ -69,6 +150,27 @@
     .nav-logo{
         width:32%;
     }
+    /* search and filter section */
+    .search-and-filter-container{
+        display:block;
+    }
+    .search-container{
+        /* border:2px solid red; */
+        width:100%;
+    }
+    .filter-container{
+        /* border:2px solid red; */
+        width:100%;
+    }
+    #search-input{
+        width:95%;
+        padding:2%;
+    }
+    #filter-by-region{
+        width:95%;
+        padding:2%;
+    }
+    
 }
 
 @media screen and (min-width:768px){
@@ -81,10 +183,32 @@
     .header{
         justify-content: space-between;
     }
+    /* search and filter section */
+    .search-and-filter-container{
+        display:flex;
+        gap:2rem;
+    }
+    .search-container{
+        /* border:2px solid red; */
+        width:100%;
+    }
+    .filter-container{
+        /* border:2px solid red; */
+        width:100%;
+    }
 }
 
 @media screen and (min-width:1024px){
     .nav-logo{
         width:8%;
+    }
+    /* search and filter section */
+    .search-container{
+        /* border:2px solid red; */
+        width:30%;
+    }
+    .filter-container{
+        /* border:2px solid red; */
+        width:30%;
     }
 }
